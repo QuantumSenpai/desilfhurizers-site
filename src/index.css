@@ -1,0 +1,210 @@
+@import "tailwindcss";
+@import "./styles/tokens.css";
+
+@theme {
+  --color-primary-blue: #2F6FEF;
+  --color-accent-green: #22C55E;
+  --color-bg-light: #F7F6F3;
+  --color-text-primary: #0B0F19;
+  --color-bg-dark: #121212;
+  --color-text-inverse: #F5F5F3;
+  --color-accent-danger: #E5484D;
+  --color-accent-safe: #22C55E;
+
+  --font-sans: 'General Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+:root {
+  font-family: var(--font-sans);
+  color-scheme: dark light;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-primary);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Subtle dot-grid pattern */
+.bg-grid-pattern {
+  background-image: radial-gradient(rgba(11, 11, 11, 0.07) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-grid-dark {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* 48px Technical Grid Overlay (1px lines, 48px spacing) */
+.bg-grid-48-dark {
+  background-size: 48px 48px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.bg-grid-48-light {
+  background-size: 48px 48px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+}
+
+/* Section 4B: Section Text Column Layout */
+.section-text-col {
+  width: 100%;
+  max-width: 480px;
+  position: relative;
+  z-index: 30;
+}
+
+@media (min-width: 1024px) {
+  .section-text-col {
+    width: 38%;
+  }
+}
+
+/* Section 1B: Hero Color Ring Breathing Pulse (4s loop, scale 1.0 -> 1.008 -> 1.0) */
+@keyframes ring-breathe {
+  0%, 100% {
+    transform: scale(1.0);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.008);
+    opacity: 0.92;
+  }
+}
+
+.animate-ring-breathe {
+  transform-origin: center;
+  animation: ring-breathe 4s ease-in-out infinite;
+}
+
+/* Section 1C: Scroll Invite Opacity Pulse (2s loop, 1.0 -> 0.4 -> 1.0) */
+@keyframes scroll-invite-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.animate-scroll-invite {
+  animation: scroll-invite-pulse 2s ease-in-out infinite;
+}
+
+/* Section 1E: Navbar Green Dot Pulse */
+@keyframes green-dot-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 8px rgba(34, 197, 94, 0);
+  }
+}
+
+.animate-green-pulse {
+  animation: green-dot-pulse 2s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+}
+
+/* Section 1F: Chevron Bounce */
+@keyframes chevron-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+.animate-chevron-bounce {
+  animation: chevron-bounce 1.5s ease-in-out infinite;
+}
+
+/* Section 3: BLE Traveling Signal Animation */
+@keyframes ble-signal {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -140;
+  }
+}
+
+.animate-ble-signal {
+  stroke-dasharray: 8 6;
+  animation: ble-signal 1.2s linear infinite;
+}
+
+/* Section 5: IntersectionObserver Entrance Classes */
+.section-content {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: none;
+}
+
+.section-content.section-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section-content.section-visible > *:nth-child(1) { transition-delay: 0s; }
+.section-content.section-visible > *:nth-child(2) { transition-delay: 0.12s; }
+.section-content.section-visible > *:nth-child(3) { transition-delay: 0.24s; }
+.section-content.section-visible > *:nth-child(4) { transition-delay: 0.36s; }
+.section-content.section-visible > *:nth-child(5) { transition-delay: 0.48s; }
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2a2a;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f3f;
+}
+
+/* Section 9: Atmospheric 35mm Micro Film-Grain Texture */
+.film-grain-overlay {
+  opacity: 0.024;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* V15: Stroke+Fill Text Treatment — reusable hollow/outlined text accent
+   Uses locked brand accent #2F6FEF. Apply to individual words/phrases
+   for visual contrast against solid-filled sibling text. */
+.text-stroke {
+  color: transparent;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: #2F6FEF;
+  text-stroke-width: 1.5px;
+  text-stroke-color: #2F6FEF;
+}
+

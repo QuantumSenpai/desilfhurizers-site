@@ -1,0 +1,22 @@
+/* Supplementary tokens and utility variables */
+:root {
+  --nav-height: 64px;
+  --transition-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+  --glow-safe: rgba(34, 197, 94, 0.4);
+  --glow-danger: rgba(229, 72, 77, 0.4);
+  --glow-blue: rgba(47, 111, 239, 0.4);
+}
+
+.glass-panel-dark {
+  background: rgba(18, 18, 18, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
