@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -73,3 +74,7 @@ export default defineConfig([
 ])
 
 ```
+=======
+# desilfhurizers-site
+Cinematic scroll-driven 3D landing page for DESILFHURIZERS, a passive colorimetric H2S exposure dosimeter wristband (ESP32-S3) — SIH 2026. Built with React Three Fiber, GSAP/ScrollTrigger, and Lenis for camera-driven hardware showcase scenes.
+>>>>>>> 676fb01f186ff67150bb4e65a9c67fbf340116f9
