@@ -12,7 +12,7 @@ export interface CameraPoseData {
 }
 
 /**
- * Canonical Camera Poses for every phase and section of DESILFHURIZERS.
+ * Canonical Camera Poses for every phase and section of DESULPHERISERS.
  *
  * All isolated parts (0–5) align 1:1 with SHOWCASE_PARTS in components.ts:
  * 0: ESP32-S3 (MCU & BLE antenna)

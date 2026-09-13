@@ -140,7 +140,7 @@ export function ResultsSection() {
             <p className="text-base text-[#4B5563] leading-relaxed">
               {/* TODO: team to fill final copy/numbers */}
               By integrating passive colorimetric sensing, miniature optical camera capture, and on-device TFLite inference
-              with AI-assisted calibration on a pretrained on-device model, Team DESILFHURIZERS delivers a compact, continuous,
+              with AI-assisted calibration on a pretrained on-device model, Team DESULPHERISERS delivers a compact, continuous,
               zero-encumbrance exposure dosimeter for industrial workforces.
             </p>
           </div>

@@ -94,7 +94,7 @@ export function Navbar() {
                 isScrolledPastHero ? 'text-[#0B0F19]' : 'text-[#F5F5F3]'
               }`}
             >
-              DESILFHURIZERS
+              DESULPHERISERS
             </span>
             <span
               className={`font-mono text-[9px] tracking-wider transition-colors duration-300 ${

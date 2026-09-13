@@ -1,80 +1,24 @@
-<<<<<<< HEAD
-# React + TypeScript + Vite
+# desulpherisers-site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Cinematic scroll-driven 3D landing page for DESULPHERISERS, a passive colorimetric H2S exposure dosimeter wristband (ESP32-S3) — SIH 2026. Built with React Three Fiber, GSAP/ScrollTrigger, and Lenis for camera-driven hardware showcase scenes.
 
-Currently, two official plugins are available:
+## Tech Stack & Architecture
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Framework**: React 19 + TypeScript + Vite
+- **3D Graphics**: Three.js, React Three Fiber (`@react-three/fiber`), React Three Drei (`@react-three/drei`)
+- **Animations & Smooth Scroll**: GSAP + ScrollTrigger, Lenis
+- **Styling**: Tailwind CSS v4
+- **Icons**: Lucide React
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+### Development
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+### Production Build
+```bash
+npm run build
 ```
-=======
-# desilfhurizers-site
-Cinematic scroll-driven 3D landing page for DESILFHURIZERS, a passive colorimetric H2S exposure dosimeter wristband (ESP32-S3) — SIH 2026. Built with React Three Fiber, GSAP/ScrollTrigger, and Lenis for camera-driven hardware showcase scenes.
->>>>>>> 676fb01f186ff67150bb4e65a9c67fbf340116f9

@@ -11,7 +11,7 @@ export function Footer() {
               <Activity className="w-3.5 h-3.5" />
             </div>
             <span className="font-mono text-sm font-bold tracking-widest uppercase">
-              DESILFHURIZERS
+              DESULPHERISERS
             </span>
           </div>
           <p className="text-xs font-mono text-gray-400 max-w-md">
